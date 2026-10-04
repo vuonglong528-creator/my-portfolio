@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIENLONG | Chạm vào sáng tạo, nâng tầm giá trị.</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS (Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <style>
+        :root {
+            --primary-blue: #1261a6;
+            --dark-blue: #2c396b;
+            --light-bg: #f4f5f5;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: 'Asap Condensed', sans-serif;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .top-header {
+            background-color: var(--light-bg);
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .main-nav {
+            background-color: var(--primary-blue);
+            padding: 0;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            text-transform: uppercase;
+            padding: 15px 20px !important;
+            font-weight: 600;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Hero Slider */
+        .hero-section {
+            height: 450px;
+            position: relative;
+        }
+
+        .hero-slide {
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            background: rgba(255,255,255,0.9);
+            padding: 30px;
+            max-width: 500px;
+            border-radius: 5px;
+            margin-left: auto;
+        }
+
+        /* Blog Section */
+        .blog-item {
+            margin-bottom: 40px;
+            transition: 0.3s;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .blog-item:hover .blog-image {
+            transform: scale(1.05);
+        }
+
+        .blog-title a {
+            color: #555;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .blog-title a:hover { color: var(--primary-blue); }
+
+        .sidebar-title {
+            font-weight: 700;
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Value Section */
+        .value-box {
+            background: #222;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-image: url('https://portfolio-vuonglong.id.vn/datafiles/50036/upload/files/C%C3%99NG%20NHAU%20N%C3%82NG%20T%E1%BA%A6M%20NG%C3%80NH%20LOGISTICS%20&%20SUPPLY%20CHAINS%20VI%E1%BB%86T%20NAM.png');
+            background-attachment: fixed;
+            background-size: cover;
+            padding: 60px 0;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .quote-section::before {
+            content: ""; position: absolute; top:0; left:0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        footer a { color: #fff; text-decoration: none; }
+        footer li { list-style: circle; margin-bottom: 10px; }
+
+        .social-icons a {
+            width: 40px; height: 40px;
+            background: var(--primary-blue);
+            display: inline-flex;
+            align-items: center; justify-content: center;
+            border-radius: 5px; margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="top-header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info">
+                <a href="mailto:thienlongvuong7415@hotmail.com" class="text-dark text-decoration-none me-3"><i class="fas fa-envelope me-1"></i> thienlongvuong7415@hotmail.com</a>
+                <a href="tel:0879937009" class="text-dark text-decoration-none"><i class="fas fa-phone me-1"></i> 0879937009</a>
+            </div>
+            <div class="languages">
+                <img src="https://portfolio-vuonglong.id.vn/assets/images/language/vn.svg" width="25" class="me-2" alt="VN">
+                <img src="https://portfolio-vuonglong.id.vn/assets/images/language/us.svg" width="25" alt="US">
+            </div>
+        </div>
+    </div>
+    <div class="container text-center py-3">
+        <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/files/VTL.png?t=1753136104" alt="Logo" height="80">
+    </div>
+    <nav class="navbar navbar-expand-lg main-nav">
+        <div class="container">
+            <button class="navbar-toggler text-white border-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog kiến thức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Slider -->
+<div class="swiper heroSwiper">
+    <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/banner/M%E1%BA%AAU%20TIN%20V%C3%80%20NH%E1%BA%ACN%20%C4%90%E1%BB%8ANH(1).png');">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>MẪU TIN VÀ NHẬN ĐỊNH</h2>
+                    <p>Chạm vào sáng tạo, nâng tầm giá trị.</p>
+                    <a href="#" class="btn btn-primary px-4">XEM THÊM</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide hero-slide" style="background-image: url('https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/banner/3.png?t=1753136114');">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>NÂNG TẦM LOGISTICS</h2>
+                    <p>Hợp tác cùng phát triển chuỗi cung ứng bền vững.</p>
+                    <a href="#" class="btn btn-primary px-4">XEM THÊM</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Main Content -->
+<div class="container my-5">
+    <div class="row">
+        <!-- Blog List -->
+        <div class="col-lg-8">
+            <div class="blog-item row">
+                <div class="col-md-5">
+                    <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/B%E1%BB%A9c%20thanh%20XNK%206%20th%C3%A1ng%20%C4%91%E1%BA%A7u%20n%C4%83m%202026.jpg" class="blog-image" alt="">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="blog-title"><a href="#">Xuất Nhập Khẩu 6 Tháng Đầu Năm 2026</a></h3>
+                    <small class="text-muted">10/07/2026</small>
+                    <hr width="30">
+                    <p>Phân tích nguyên nhân vì sao giá hàng hóa nội địa vẫn neo cao dưới góc nhìn Logistics chuyên sâu...</p>
+                </div>
+            </div>
+
+            <div class="blog-item row">
+                <div class="col-md-5">
+                    <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/Logistics%20kh%C3%B4ng%20m%E1%BB%9Bi!%20%C4%90%C6%B0%E1%BB%9Dng%20m%C3%B2n%20H%E1%BB%93%20Ch%C3%AD%20Minh%20v%C3%A0%20ngh%E1%BB%87%20thu%E1%BA%ADt%20h%E1%BA%ADu%20c%E1%BA%A7n%20c%E1%BB%A7a%20Vi%E1%BB%87t%20Nam.jpg" class="blog-image" alt="">
+                </div>
+                <div class="col-md-7">
+                    <h3 class="blog-title"><a href="#">Đường mòn Hồ Chí Minh và nghệ thuật hậu cần</a></h3>
+                    <small class="text-muted">02/07/2026</small>
+                    <hr width="30">
+                    <p>Khám phá hệ thống Đường mòn Hồ Chí Minh dưới góc nhìn Quản trị Chuỗi cung ứng (SCM)...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="mb-4 text-center">
+                <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/files/C%E1%BA%A3m%20%C6%A1n%20V%C3%AC%20%C4%91%C3%A3%20%C4%91%E1%BB%8Dc%20b%C3%A0i%20c%E1%BB%A7a%20m%C3%ACnh%20nha(1).png" class="img-fluid" alt="Intro">
+            </div>
+            
+            <h4 class="sidebar-title">DANH MỤC</h4>
+            <ul class="list-unstyled">
+                <li class="py-2 border-bottom"><a href="#" class="text-decoration-none text-dark">Tin tức trong nước</a></li>
+                <li class="py-2 border-bottom"><a href="#" class="text-decoration-none text-dark">Tin tức quốc tế</a></li>
+                <li class="py-2 border-bottom"><a href="#" class="text-decoration-none text-dark">Kiến thức chuyên ngành</a></li>
+            </ul>
+
+            <h4 class="sidebar-title mt-4">BÀI VIẾT NỔI BẬT</h4>
+            <!-- Bài viết nhỏ sidebar -->
+            <div class="d-flex mb-3">
+                <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/B%E1%BB%A9c%20thanh%20XNK%206%20th%C3%A1ng%20%C4%91%E1%BA%A7u%20n%C4%83m%202026.jpg" width="60" height="60" class="rounded-circle me-3" style="object-fit: cover;">
+                <h6><a href="#" class="text-decoration-none text-dark">Xuất nhập khẩu 6 tháng 2026...</a></h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Values Section -->
+<section class="value-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/an%20to%C3%A0n%20v%C3%A0%20ch%E1%BA%A5t%20l%C6%B0%E1%BB%A3ng.png" width="60" class="mb-3">
+                <h5>CHẤT LƯỢNG</h5>
+            </div>
+            <div class="col-md-3">
+                <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/8.png?t=1753136106" width="60" class="mb-3">
+                <h5>HỌC HỎI</h5>
+            </div>
+            <div class="col-md-3">
+                <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/9.png?t=1753136107" width="60" class="mb-3">
+                <h5>SÁNG TẠO</h5>
+            </div>
+            <div class="col-md-3">
+                <img src="https://portfolio-vuonglong.id.vn/datafiles/50036/upload/images/10.png?t=1753136107" width="60" class="mb-3">
+                <h5>GIÁ TRỊ</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote -->
+<section class="quote-section">
+    <div class="container position-relative">
+        <h2 class="fw-bold">HỌC VÀ LÀM LÀ CUỘC ĐUA KHÔNG HỒI KẾT</h2>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5 class="mb-4">VỀ CHÚNG TÔI</h5>
+                <p>THIENLONG | Chạm vào sáng tạo, nâng tầm giá trị.</p>
+                <p><i class="fas fa-phone me-2"></i> 0879937009</p>
+                <div class="social-icons mt-3">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5 class="mb-4">MENU</h5>
+                <ul class="ps-3">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Thư viện</a></li>
+                    <li><a href="#">Video</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5 class="mb-4">BÀI VIẾT MỚI</h5>
+                <div class="mb-2">
+                    <small>10/07/2026</small><br>
+                    <a href="#" style="font-size: 14px;">Xuất nhập khẩu 6 tháng đầu năm...</a>
+                </div>
+                <div class="mb-2">
+                    <small>02/07/2026</small><br>
+                    <a href="#" style="font-size: 14px;">Nghệ thuật hậu cần Việt Nam...</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5 class="mb-4">FANPAGE</h5>
+                <div class="bg-secondary text-center py-5 rounded">
+                    Facebook Widget Area
+                </div>
+            </div>
+        </div>
+        <hr class="mt-5">
+        <p class="text-center mb-0">© 2024-2026 Vuong Thien Long. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    // Initialize Hero Slider
+    const swiper = new Swiper('.heroSwiper', {
+        loop: true,
+        autoplay: { delay: 5000 },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+    });
+</script>
+
+</body>
+</html>
